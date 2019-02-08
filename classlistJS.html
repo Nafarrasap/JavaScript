@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List In Java Script</title>
+    <!-- Load bootstrap js  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- load jquery and bootstrap js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      function ChangeBackground(color){
+        //mengambil elemen html
+        var element = document.getElementById('pesan');
+        //mengosongkan class pada elemen yang diambil
+        element.className="";
+        //memberikan class tipe alert berdasarkan parameter
+        element.classList.add("alert");
+        element.classList.add("alert-"+color);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="sol-sm-6">
+          <div class="card col-sm-12">
+            <div class="card-header bg-success text-white">
+              <h4>Alert Setting</h4>
+            </div>
+            <div class="card-body">
+              <div id="pesan" class="alert alert-light">
+                <strong>Urgent!</strong>
+                This is a allert message, you can change type of alert bellow.
+              </div>
+            </div>
+            <div class="card-footer">
+              <!-- background setting -->
+              <select class="form-control" onchange="ChangeBackground(this.value);">
+                <option value="light">Default</option>
+                <option value="Primary">Primary</option>
+                <option value="danger">danger</option>
+                <option value="warning">warning</option>
+                <option value="success">Success</option>
+                <option value="dark">dark</option>
+                <option value="secondary">secondary</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
